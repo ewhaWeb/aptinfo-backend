@@ -26,9 +26,10 @@ public class AvgDataCalculator {
 
 	public ArrayList<MonthData> findMonthData(int guCode, String targetYear) {
 		System.out.println("find month data - Service");
-		//ArrayList<MonthData> data = new ArrayList<>();
-		return avgDataRepository.findByGuCodeAndTargetYear(guCode, targetYear);
-		//return data;
+		ArrayList<MonthData> data= new ArrayList<>();
+		avgDataRepository.findByGuCodeAndTargetYear(guCode, targetYear).forEach(data::add);
+		System.out.println(data);
+		return data;
 	}
 
 }

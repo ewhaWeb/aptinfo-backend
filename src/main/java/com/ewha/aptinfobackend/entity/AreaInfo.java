@@ -7,16 +7,14 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 
 @Entity
 @Getter @Setter
 @NoArgsConstructor @AllArgsConstructor
 @Immutable
+@Table(name = "area_data")
 public class AreaInfo {
    /* @Id @GeneratedValue
     private int id;*/
@@ -30,8 +28,6 @@ public class AreaInfo {
     private int minPrice;
     private int avgPrice;
     private int trxnAmount;
-    private int population;
-    private String isIssue;
 
 
 }
